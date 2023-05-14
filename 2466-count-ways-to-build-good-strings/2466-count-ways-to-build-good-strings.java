@@ -4,7 +4,7 @@ class Solution {
         int res = 0;
         int mod = 1000000007;
         dp[0] = 1;
-        for (int i = 1; i <= high; ++i) {
+        for (int i = 1; i <= high; i++) {
             // if we can add 0 string then add 
             if (i >= zero) dp[i] = (dp[i] + dp[i - zero]) % mod;
             // if we can add 1's string i.e i >= len of 1's string
