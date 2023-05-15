@@ -16,15 +16,18 @@ class Solution {
             leftNode = leftNode.next;
         }
         
-        ListNode current = leftNode;
-        while (current.next != null) {
-            current = current.next;
-            rightNode = rightNode.next;
+        
+        ListNode cur = leftNode;
+        while(cur.next != null){
+            cur=cur.next;
+            rightNode=rightNode.next;
         }
         
-        int temp = leftNode.val;
-        leftNode.val = rightNode.val;
-        rightNode.val = temp;
+        int temp  =rightNode.val;
+        rightNode.val=leftNode.val;
+        leftNode.val=temp;
+        
+        
         
         return head;
     }
