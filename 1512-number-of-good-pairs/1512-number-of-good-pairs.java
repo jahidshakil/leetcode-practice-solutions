@@ -4,11 +4,9 @@
 class Solution {
     public int numIdenticalPairs(int[] nums) {
         int res = 0;
-        HashMap<Integer,Integer>hp = new HashMap<>();
-        for(int num : nums){
-            hp.put(num, hp.getOrDefault(num,0)+1);
-            
-            res+=hp.get(num)-1;
+        int arr [] = new int[101];
+        for(int n:nums){
+            res+=arr[n]++;
         }
         return res;
     }
