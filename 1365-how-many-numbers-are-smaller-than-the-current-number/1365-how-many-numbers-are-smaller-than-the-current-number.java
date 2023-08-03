@@ -3,11 +3,11 @@ class Solution {
         int n = nums.length;
         int arr[] = new int[n];
         for(int i=0; i<n; i++){
-            int temp =0;
+            // int temp =0;
             for(int j=0; j<n; j++){
-                if(nums[j] < nums[i])temp++;
+                if(nums[j] < nums[i]) ++arr[i];
             }
-            arr[i] = temp;
+            // arr[i] = temp;
         }
         
         return arr;
