@@ -25,9 +25,11 @@ class Solution {
 //         }
 //         return -1;
         
-        for(int i = 1; i < Math.sqrt(n); ++i) 
+        for(int i = 1; i < Math.sqrt(n); ++i) {
         if(n % i== 0 && --k == 0) 
-            return i;                       
+            return i;     
+        }
+                            
         for(int i = (int) Math.sqrt(n); i >= 1; --i) 
             if(n % (n/i) == 0 && --k == 0) 
                 return n/i;          
