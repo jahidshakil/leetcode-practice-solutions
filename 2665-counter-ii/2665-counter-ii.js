@@ -9,8 +9,7 @@ var createCounter = function(init) {
             return ++val;
         },
         decrement: ()=>{
-           val-=1;
-            return val
+            return --val
     },
         reset : ()=>{
             val=init;
