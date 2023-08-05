@@ -12,7 +12,8 @@ var createCounter = function(init) {
             return --val
     },
         reset : ()=>{
-            return val=init;
+            val=init;
+            return val;
         }
     }
 };
