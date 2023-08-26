@@ -1,6 +1,4 @@
 # Write your MySQL query statement below
-SELECT e2.name as Employee
-FROM employee e1
-INNER JOIN employee e2 ON e1.id = e2.managerID
-WHERE
-e1.salary < e2.salary
+SELECT e.name AS Employee FROM Employee e
+JOIN Employee m ON e.managerId = m.id
+WHERE e.salary > m.salary
