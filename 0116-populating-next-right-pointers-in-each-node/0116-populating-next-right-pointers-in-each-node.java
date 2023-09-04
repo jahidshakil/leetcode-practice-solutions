@@ -52,7 +52,7 @@ class Solution {
             Node temp = current;
             while(current != null){
                 current.left.next = current.right;
-                if(current.right!=null && current.next!=null) current.right.next=current.next.left;
+                if(  current.next!=null) current.right.next=current.next.left;
                 current = current.next;
             }
             current = temp.left;
