@@ -41,22 +41,41 @@ class Node {
 //     }
 // }
 
-
 class Solution {
 
     public Node connect(Node root) {
-        if (root == null) return root;
-        Queue<Node> q = new LinkedList<>();
-        q.add(root);
-        while (!q.isEmpty()) {
-            int size = q.size();
-            for (int i = 0; i < size; i++) {
-                Node curr = q.poll();
-                if (curr.left != null) q.add(curr.left);
-                if (curr.right != null) q.add(curr.right);
-                if (i == size - 1) curr.next = null; else curr.next = q.peek();
+      if(root == null)  return root;
+        
+        Node current = root;
+        
+        while(current.left != null){
+            Node temp = current;
+            while(current != null){
+                current.left.next = current.right;
+                if(current.right!=null && current.next!=null) current.right.next=current.next.left;
+                current = current.next;
             }
+            current = temp.left;
         }
         return root;
     }
 }
+
+// class Solution {
+
+//     public Node connect(Node root) {
+//         if (root == null) return root;
+//         Queue<Node> q = new LinkedList<>();
+//         q.add(root);
+//         while (!q.isEmpty()) {
+//             int size = q.size();
+//             for (int i = 0; i < size; i++) {
+//                 Node curr = q.poll();
+//                 if (curr.left != null) q.add(curr.left);
+//                 if (curr.right != null) q.add(curr.right);
+//                 if (i == size - 1) curr.next = null; else curr.next = q.peek();
+//             }
+//         }
+//         return root;
+//     }
+// }
