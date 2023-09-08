@@ -22,7 +22,7 @@ public boolean isBalanced(TreeNode root) {
 }
 
 public int maxDepth(TreeNode root) {
-    if (root == null)
+    if (root == null || result==false)
         return 0;
     int l = maxDepth(root.left);
     int r = maxDepth(root.right);
