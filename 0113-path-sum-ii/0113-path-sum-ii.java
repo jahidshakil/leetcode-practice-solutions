@@ -31,9 +31,7 @@ class Solution {
         }
         
         helper(root.left, targetSum - root.val, res, new ArrayList<>(path));
-        helper(root.right, targetSum - root.val, res, new ArrayList<>(path));
-
-        
+        helper(root.right, targetSum - root.val, res, new ArrayList<>(path));    
         
     }
 }
