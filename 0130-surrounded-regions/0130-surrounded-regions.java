@@ -1,9 +1,5 @@
 class Solution {
     public void solve(char[][] board) {
-        
-        
-
-        
         if(board.length == 0 || board[0].length == 0 ) return;
         if(board.length < 3 || board[0].length < 3) return;
         int m = board.length;
