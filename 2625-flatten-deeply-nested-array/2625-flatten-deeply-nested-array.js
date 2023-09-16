@@ -5,9 +5,8 @@
  */
 var flat = function (arr, n) {
     if(n==0) return arr;
-    let q;
     while(n>0 ){
-         q = [];
+        let q = [];
         for(let i=0; i<arr.length; i++){
             if(Array.isArray(arr[i])){
                 q.push(...arr[i]);
@@ -21,4 +20,6 @@ var flat = function (arr, n) {
     }
     return arr;
 };
+
+
 
