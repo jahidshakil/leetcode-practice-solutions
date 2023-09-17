@@ -2,17 +2,17 @@
  * @param {Function} fn
  */
 function memoize(fn) {
-    let memo = new Map();
-    return function(...args) {
+memo = new Map();
+    return function(...args){
         let key = JSON.stringify(args);
-        
         if(memo.has(key)){
             return memo.get(key);
         }else{
-            let ans = fn(...args);
+            let ans = fn(...args) 
             memo.set(key, ans);
-            return ans;
+        return ans;
         }
+        
     }
 }
 
