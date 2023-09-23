@@ -6,13 +6,10 @@ class Solution {
         
         while( l< r){
             if( arr[l]  > arr[r] ){
-                arr[l] = s.charAt(r);
-                r--;
-                l++;
+                arr[l++] = s.charAt(r--);
+                
             }else{
-                arr[r] = arr[l];
-                r--;
-                l++;
+                arr[r--] = arr[l++];
             }
         }
         
