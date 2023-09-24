@@ -1,6 +1,5 @@
 class Solution {
     public int[] sortEvenOdd(int[] nums) {
-        int res[] = new int[nums.length];
         List<Integer>even = new ArrayList<>();
         List<Integer>odd = new ArrayList<>();
         for(int i=0; i<nums.length; i++){
@@ -16,13 +15,13 @@ class Solution {
         
         for(int i=0; i<nums.length; i++){
             if(i%2==0){
-                res[i] = even.remove(0);
+                nums[i] = even.remove(0);
             }else{
-                res[i] = odd.remove(0);
+                nums[i] = odd.remove(0);
             }
         }
         
-        return res;
+        return nums;
 
     }
     
