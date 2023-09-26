@@ -2,7 +2,6 @@ class Solution {
     public int dominantIndex(int[] nums) {
         int largestNum = 0;
         int largestIndex = 0;
-        boolean isLargest = true;
         for(int i =0; i<nums.length; i++){
             if(nums[i] > largestNum){
                 largestNum = nums[i];
